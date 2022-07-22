@@ -7,6 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 
 # Automatically generated CSS file
+src/css/styles.css
 ./src/css/styles.css
 flow-typed/
 
