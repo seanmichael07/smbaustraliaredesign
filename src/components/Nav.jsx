@@ -26,50 +26,50 @@ export default function Nav() {
                                     Home
                                 </Link>
 
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/services"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Services
-                                </a>
+                                </Link>
 
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/about-us"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     About
-                                </a>
+                                </Link>
 
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/locations"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Locations
-                                </a>
-                                <a
-                                    href="/"
+                                </Link>
+                                <Link
+                                    to="/FAQ"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     FAQ
-                                </a>
-                                <a
-                                    href="/"
-                                    className="text-slate-300 py-2 rounded-md text-md font-medium"
+                                </Link>
+                                <Link
+                                    to="/blog"
+                                    className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Blog
-                                </a>
-                                <a
-                                    href="www.google.com"
+                                </Link>
+                                <Link
+                                    to="/employment"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Employment
-                                </a>
-                                <a
-                                    href="/"
+                                </Link>
+                                <Link
+                                    to="/contact"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Contact
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
