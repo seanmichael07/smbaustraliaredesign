@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import logoSmall from '../images/SMBLogoSmall.svg'
 import '../css/Nav.css'
 
@@ -17,12 +19,12 @@ export default function Nav() {
                         </div>
                         <div className="hidden sm:block sm:ml-6 self-center">
                             <div className="flex space-x-8">
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/"
                                     className="navLink text-slate-300 py-2 rounded-md text-md font-medium"
                                 >
                                     Home
-                                </a>
+                                </Link>
 
                                 <a
                                     href="/"
@@ -73,12 +75,12 @@ export default function Nav() {
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         <div className="ml-3 relative">
-                            <a
-                                href="/get-quote"
+                            <Link
+                                to="/get-quote"
                                 className="bg-white text-orange hover:text-white border border-orange hover:bg-orange text-lg rounded-full px-3 py-2"
                             >
                                 Get Quote
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
