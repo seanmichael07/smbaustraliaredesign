@@ -95,7 +95,7 @@ export default class QuoteForm extends Component {
             case 5:
                 return <Success />
             default:
-            // do nothing
+                return null
         }
     }
 }

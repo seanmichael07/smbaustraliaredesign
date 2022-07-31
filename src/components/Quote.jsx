@@ -4,11 +4,12 @@ import QuoteForm from './QuoteFormComponents/QuoteForm'
 
 export default function Quote() {
     return (
-        <div className="border border-black h-screen">
+        <div className="h-screen overflow-hidden">
             <Nav />
-            <div className="h-full relative border border-black">
-                <div className="min-h-[45%] bg-orange" />
-                <div className="quoteContainer absolute top-1/3 right-1/2 bg-white border border-black">
+            <div className="h-full relative">
+                <div className="max-w-[55%] h-full bg-orange" />
+                <div className="quoteContainer h-64 w-72 absolute top-1/4 left-[55%] bg-white border border-black">
+                    <h1>Get a Quote</h1>
                     <QuoteForm />
                 </div>
             </div>
