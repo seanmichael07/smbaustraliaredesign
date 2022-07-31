@@ -22,6 +22,7 @@ function DestinationDetails({ nextStep, handleChange, values }) {
                         <option value="Melbourne">Melbourne</option>
                     </select>
                 </label>
+                <br />
                 <label htmlFor="destination">
                     Destination
                     <select
@@ -35,7 +36,20 @@ function DestinationDetails({ nextStep, handleChange, values }) {
                         <option value="Melbourne">Melbourne</option>
                     </select>
                 </label>
-
+                <br />
+                <label htmlFor="isDriveable">
+                    Is the vehicle Driveable
+                    <select
+                        name="destination"
+                        value={values.isDriveable}
+                        onChange={handleChange('isDriveable')}
+                        id="isDriveable"
+                    >
+                        <option value>Yes</option>
+                        <option value={false}>No</option>
+                    </select>
+                </label>
+                <br />
                 <button onClick={Continue} type="submit">
                     Next
                 </button>
