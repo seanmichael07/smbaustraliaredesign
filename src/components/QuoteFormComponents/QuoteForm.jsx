@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react'
 import DestinationDetails from './DestinationDetails'
-import CarDetails from './CarDetails'
 import CustomerDetails from './CustomerDetails'
 import Success from './Success'
 import Confirmation from './Confirmation'
@@ -37,7 +36,7 @@ export default class QuoteForm extends Component {
 
     // handle field change
     handleChange = (input) => (e) => {
-        this.setState({ [input]: e.target.value })
+        this.setState({ [input]: e.value })
     }
 
     render() {
@@ -66,7 +65,7 @@ export default class QuoteForm extends Component {
                 )
             case 2:
                 return (
-                    <CarDetails
+                    <CustomerDetails
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
@@ -76,23 +75,13 @@ export default class QuoteForm extends Component {
 
             case 3:
                 return (
-                    <CustomerDetails
-                        prevStep={this.prevStep}
-                        nextStep={this.nextStep}
-                        handleChange={this.handleChange}
-                        values={values}
-                    />
-                )
-
-            case 4:
-                return (
                     <Confirmation
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
                         values={values}
                     />
                 )
-            case 5:
+            case 4:
                 return <Success />
             default:
                 return null

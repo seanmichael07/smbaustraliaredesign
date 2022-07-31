@@ -1,4 +1,5 @@
 import React from 'react'
+import Select from 'react-select'
 
 function DestinationDetails({ nextStep, handleChange, values }) {
     const Continue = (e) => {
@@ -6,50 +7,41 @@ function DestinationDetails({ nextStep, handleChange, values }) {
         nextStep()
     }
 
+    const destinationOptions = [
+        { value: 'Brisbane', label: 'Brisbane' },
+        { value: 'Sydney', label: 'Sydney' },
+        { value: 'Melbourne', label: 'Melbourne' },
+    ]
+
+    const driveableOptions = [
+        { value: true, label: 'Yes' },
+        { value: false, label: 'No' },
+    ]
+
     return (
         <div>
             <form>
-                <label htmlFor="origin">
-                    Origin
-                    <select
-                        name="origin"
-                        value={values.origin}
-                        onChange={handleChange('origin')}
-                        id="origin"
-                    >
-                        <option value="Brisbane">Brisbane</option>
-                        <option value="Sydney">Sydney</option>
-                        <option value="Melbourne">Melbourne</option>
-                    </select>
-                </label>
-                <br />
-                <label htmlFor="destination">
-                    Destination
-                    <select
-                        name="destination"
-                        value={values.destination}
-                        onChange={handleChange('destination')}
-                        id="destination"
-                    >
-                        <option value="Brisbane">Brisbane</option>
-                        <option value="Sydney">Sydney</option>
-                        <option value="Melbourne">Melbourne</option>
-                    </select>
-                </label>
-                <br />
-                <label htmlFor="isDriveable">
-                    Is the vehicle Driveable
-                    <select
-                        name="destination"
-                        value={values.isDriveable}
-                        onChange={handleChange('isDriveable')}
-                        id="isDriveable"
-                    >
-                        <option value>Yes</option>
-                        <option value={false}>No</option>
-                    </select>
-                </label>
-                <br />
+                <h1>Origin</h1>
+                <Select
+                    value={destinationOptions.value}
+                    options={destinationOptions}
+                    defaultValue={values.origin}
+                    onChange={handleChange('origin')}
+                />
+                <h1>Destination</h1>
+                <Select
+                    value={destinationOptions.value}
+                    options={destinationOptions}
+                    defaultValue={values.destination}
+                    onChange={handleChange('destination')}
+                />
+                <h1>Is vehicle Driveable</h1>
+                <Select
+                    value={driveableOptions.value}
+                    options={driveableOptions}
+                    defaultValue={values.isDriveable}
+                    onChange={handleChange('isDriveable')}
+                />
                 <button onClick={Continue} type="submit">
                     Next
                 </button>
