@@ -4,6 +4,7 @@ import DestinationDetails from './DestinationDetails'
 import CustomerDetails from './CustomerDetails'
 import Success from './Success'
 import Confirmation from './Confirmation'
+import QuickQuoteView from './QuickQuoteView'
 
 export default class QuoteForm extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ export default class QuoteForm extends Component {
             model: '',
             year: '',
             isDriveable: true,
+            vehicleType: '',
         }
     }
 
@@ -41,8 +43,20 @@ export default class QuoteForm extends Component {
 
     render() {
         const { step } = this.state
-        const { origin, destination, firstName, lastName, email, make, model, year, isDriveable } =
-            this.state
+
+        const {
+            origin,
+            destination,
+            firstName,
+            lastName,
+            email,
+            make,
+            model,
+            year,
+            isDriveable,
+            vehicleType,
+        } = this.state
+
         const values = {
             origin,
             destination,
@@ -53,6 +67,7 @@ export default class QuoteForm extends Component {
             model,
             year,
             isDriveable,
+            vehicleType,
         }
         switch (step) {
             case 1:
@@ -65,6 +80,14 @@ export default class QuoteForm extends Component {
                 )
             case 2:
                 return (
+                    <QuickQuoteView
+                        prevStep={this.prevStep}
+                        nextStep={this.nextStep}
+                        values={values}
+                    />
+                )
+            case 3:
+                return (
                     <CustomerDetails
                         prevStep={this.prevStep}
                         nextStep={this.nextStep}
@@ -73,7 +96,7 @@ export default class QuoteForm extends Component {
                     />
                 )
 
-            case 3:
+            case 4:
                 return (
                     <Confirmation
                         prevStep={this.prevStep}
@@ -81,7 +104,7 @@ export default class QuoteForm extends Component {
                         values={values}
                     />
                 )
-            case 4:
+            case 5:
                 return <Success />
             default:
                 return null

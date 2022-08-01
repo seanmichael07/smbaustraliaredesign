@@ -8,8 +8,7 @@ export default function Quote() {
             <Nav />
             <div className="h-full relative">
                 <div className="max-w-[55%] h-full bg-orange" />
-                <div className="quoteContainer h-64 w-72 absolute top-1/4 left-[55%] bg-white border border-black">
-                    <h1>Get a Quote</h1>
+                <div className="quoteContainer absolute w-auto h-auto top-1/4 left-[55%] bg-white border border-black">
                     <QuoteForm />
                 </div>
             </div>
