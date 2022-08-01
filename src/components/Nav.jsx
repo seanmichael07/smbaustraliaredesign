@@ -77,7 +77,7 @@ export default function Nav() {
                         <div className="ml-3 relative">
                             <Link
                                 to="/get-quote"
-                                className="bg-white text-orange hover:text-white border border-orange hover:bg-orange text-lg rounded-full px-3 py-2"
+                                className="bg-white text-orange hover:text-white border border-orange hover:bg-orange text-lg rounded-full px-3 py-4"
                             >
                                 Get Quote
                             </Link>

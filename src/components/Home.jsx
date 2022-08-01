@@ -23,7 +23,7 @@ export default function Home() {
                 </h1>
                 <h2 className="text-5xl mt-3 mb-8">Nationwide Car Transport</h2>
                 <Link
-                    className="border border-slate-800 bg-slate-800 text-white rounded-full p-4 mt-5 text-lg"
+                    className="border border-slate-800 bg-slate-800 text-white rounded-full px-4 py-5 mt-5 text-lg"
                     to="/get-quote"
                 >
                     Get your free quote
