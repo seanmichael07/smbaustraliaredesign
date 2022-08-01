@@ -1,7 +1,7 @@
 import React from 'react'
 import Select from 'react-select'
 
-function DestinationDetails({ nextStep, handleChange, values }) {
+function DestinationDetails({ nextStep, handleSelectChange, values }) {
     const Continue = (e) => {
         e.preventDefault()
         nextStep()
@@ -18,6 +18,12 @@ function DestinationDetails({ nextStep, handleChange, values }) {
         { value: false, label: 'No' },
     ]
 
+    const vehicleOptions = [
+        { value: '4wd', label: '4wd' },
+        { value: 'Car', label: 'Car' },
+        { value: 'Van', label: 'Van' },
+    ]
+
     return (
         <div>
             <form>
@@ -26,21 +32,28 @@ function DestinationDetails({ nextStep, handleChange, values }) {
                     value={destinationOptions.value}
                     options={destinationOptions}
                     defaultValue={values.origin}
-                    onChange={handleChange('origin')}
+                    onChange={handleSelectChange('origin')}
                 />
                 <h1>Destination</h1>
                 <Select
                     value={destinationOptions.value}
                     options={destinationOptions}
                     defaultValue={values.destination}
-                    onChange={handleChange('destination')}
+                    onChange={handleSelectChange('destination')}
                 />
                 <h1>Is vehicle Driveable</h1>
                 <Select
                     value={driveableOptions.value}
                     options={driveableOptions}
                     defaultValue={values.isDriveable}
-                    onChange={handleChange('isDriveable')}
+                    onChange={handleSelectChange('isDriveable')}
+                />
+                <h1>Vehicle type</h1>
+                <Select
+                    value={vehicleOptions.value}
+                    options={vehicleOptions}
+                    defaultValue={values.vehicleType}
+                    onChange={handleSelectChange('vehicleType')}
                 />
                 <button onClick={Continue} type="submit">
                     Next

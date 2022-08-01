@@ -36,9 +36,14 @@ export default class QuoteForm extends Component {
         this.setState({ step: step + 1 })
     }
 
-    // handle field change
-    handleChange = (input) => (e) => {
+    // handle selct input type field change
+    handleSelectChange = (input) => (e) => {
         this.setState({ [input]: e.value })
+    }
+
+    // handle regular input type field changes
+    handleChange = (input) => (e) => {
+        this.setState({ [input]: e.target.value })
     }
 
     render() {
@@ -74,7 +79,7 @@ export default class QuoteForm extends Component {
                 return (
                     <DestinationDetails
                         nextStep={this.nextStep}
-                        handleChange={this.handleChange}
+                        handleSelectChange={this.handleSelectChange}
                         values={values}
                     />
                 )
