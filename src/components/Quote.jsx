@@ -30,7 +30,10 @@ export default function Quote() {
                         </div>
                     </div>
                 </div>
-                <div className="quoteContainer absolute w-[40%] top-[15%] left-[55%] bg-white rounded-2xl shadow-2xl">
+                <div
+                    className="quoteContainer absolute bg-white rounded-2xl shadow-2xl"
+                    style={{ width: '40%', top: '15%', left: '55%' }}
+                >
                     <QuoteForm />
                 </div>
             </div>
