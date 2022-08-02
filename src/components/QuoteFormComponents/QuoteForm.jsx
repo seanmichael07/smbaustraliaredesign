@@ -21,6 +21,7 @@ export default class QuoteForm extends Component {
             year: '',
             isDriveable: true,
             vehicleType: '',
+            phoneNumber: '',
         }
     }
 
@@ -60,6 +61,7 @@ export default class QuoteForm extends Component {
             year,
             isDriveable,
             vehicleType,
+            phoneNumber,
         } = this.state
 
         const values = {
@@ -73,6 +75,7 @@ export default class QuoteForm extends Component {
             year,
             isDriveable,
             vehicleType,
+            phoneNumber,
         }
         switch (step) {
             case 1:

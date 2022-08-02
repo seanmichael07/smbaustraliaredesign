@@ -25,39 +25,57 @@ function DestinationDetails({ nextStep, handleSelectChange, values }) {
     ]
 
     return (
-        <div>
+        <div className="p-8">
             <form>
-                <h1>Origin</h1>
-                <Select
-                    value={destinationOptions.value}
-                    options={destinationOptions}
-                    defaultValue={values.origin}
-                    onChange={handleSelectChange('origin')}
-                />
-                <h1>Destination</h1>
-                <Select
-                    value={destinationOptions.value}
-                    options={destinationOptions}
-                    defaultValue={values.destination}
-                    onChange={handleSelectChange('destination')}
-                />
-                <h1>Is vehicle Driveable</h1>
-                <Select
-                    value={driveableOptions.value}
-                    options={driveableOptions}
-                    defaultValue={values.isDriveable}
-                    onChange={handleSelectChange('isDriveable')}
-                />
-                <h1>Vehicle type</h1>
-                <Select
-                    value={vehicleOptions.value}
-                    options={vehicleOptions}
-                    defaultValue={values.vehicleType}
-                    onChange={handleSelectChange('vehicleType')}
-                />
-                <button onClick={Continue} type="submit">
-                    Next
-                </button>
+                <div className="grid grid-rows-5 gap-y-8">
+                    <div>
+                        <h1 className="text-lg">Origin</h1>
+                        <Select
+                            value={destinationOptions.value}
+                            options={destinationOptions}
+                            defaultValue={values.origin}
+                            onChange={handleSelectChange('origin')}
+                            className="pt-2"
+                        />
+                    </div>
+                    <div>
+                        <h1 className="text-lg">Destination</h1>
+                        <Select
+                            value={destinationOptions.value}
+                            options={destinationOptions}
+                            defaultValue={values.destination}
+                            onChange={handleSelectChange('destination')}
+                            className="pt-2"
+                        />
+                    </div>
+                    <div>
+                        <h1 className="text-lg">Is Vehicle Driveable</h1>
+                        <Select
+                            value={driveableOptions.value}
+                            options={driveableOptions}
+                            defaultValue={values.isDriveable}
+                            onChange={handleSelectChange('isDriveable')}
+                            className="pt-2"
+                        />
+                    </div>
+                    <div>
+                        <h1 className="text-lg">Vehicle type</h1>
+                        <Select
+                            value={vehicleOptions.value}
+                            options={vehicleOptions}
+                            defaultValue={values.vehicleType}
+                            onChange={handleSelectChange('vehicleType')}
+                            className="pt-2"
+                        />
+                    </div>
+                    <button
+                        className="bg-green-500 rounded-full text-xl text-white"
+                        onClick={Continue}
+                        type="submit"
+                    >
+                        Next
+                    </button>
+                </div>
             </form>
         </div>
     )
