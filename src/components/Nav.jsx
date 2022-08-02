@@ -9,7 +9,7 @@ export default function Nav() {
         <nav className="bg-transparent">
             <div className="mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-auto">
-                    <div className="ml-52 flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div className="ml-36 flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div className=" items-center">
                             <img
                                 className="hidden lg:block h-24"

@@ -15,7 +15,7 @@ export default function Home() {
             }}
         >
             <Nav />
-            <div className="textContent ml-52 pt-32">
+            <div className="textContent ml-36 pt-32">
                 <h1 className="text-9xl">
                     <p>Simple,</p>
                     <p>Fast</p>
