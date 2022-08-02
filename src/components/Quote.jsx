@@ -9,7 +9,7 @@ export default function Quote() {
         <div className="h-screen overflow-hidden">
             <Nav />
             <div className="h-full relative">
-                <div className="max-w-[51%] h-full bg-orange">
+                <div className="w-1/2 h-full bg-orange">
                     <div className="ml-24 pt-32">
                         <h1 className="text-5xl pb-6">Get a quote instantly!</h1>
                         <h2 className="text-2xl">
